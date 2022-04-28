@@ -19,7 +19,7 @@ def secondsToMinutes(seconds):
     return int(minutes), int(seconds)
 
 
-def raceCalculation():
+def paceCalculation():
 
     totalMiles = milesInKilometres()
     totalSeconds = secondsInMinutes()
@@ -28,8 +28,18 @@ def raceCalculation():
 
     return SecondsPerMile
 
+def calculateAverageSpeed():
+    totalMiles = milesInKilometres()
+    totalSeconds = secondsInMinutes()
+    
+    milesPerSecond = totalMiles/totalSeconds
 
-raceTime = raceCalculation()
-raceMinutes, raceSeconds = secondsToMinutes(raceTime)
+    return milesPerSecond
 
+
+pace = paceCalculation()
+raceMinutes, raceSeconds = secondsToMinutes(pace)
 print(raceMinutes, raceSeconds)
+
+averageMph = 3600/pace
+print(averageMph)
