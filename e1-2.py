@@ -32,7 +32,6 @@ def calculateAverageSpeed():
     milesPerSecond = totalMiles/totalSeconds
     return milesPerSecond
 
-
 # Calculate pace
 pace = calculatePace()
 raceMinutes, raceSeconds = secondsToMinutes(pace)
